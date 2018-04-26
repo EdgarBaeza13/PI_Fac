@@ -790,5 +790,654 @@ incluirse dentro del XML de acuerdo a la clave asignada dentro del catálogo de U
 
   </tr>
  
-</table>
+</table><br/></br>
+
+<body>      <!-- Empieza codigo de Jonathan -->
+<H1>Guia de llenado del CFDI global 3.3:</H1>
+
+Cuando se emita un CFDI, se debe  hacer  con las especificaciones señaladas en cada 
+uno de los campos expresados en lenguaje no informático que se incluyen en esta 
+sección.
+En el presente documento se hace referencia a la descripción de la información  que 
+debe contener el citado comprobante fiscal.
+Cuando en las siguientes descripciones se establezca el uso de un valor, éste se señala 
+entre  comillas, pero en  el  CFDI debe registrarse sin  incluir  las  comillas,  respetando 
+mayúsculas, minúsculas, números, espacios y signos de puntuación.
+
+  </body><br/><br/>
+
+<table class="egt">
+  
+ <head>
+
+   <caption>Requisitos para el llenado del CFDI global (3.3)</caption>
+   <br>
+   <H1>Requisitos para el llenado del CFDI global (3.3)</H1>
+
+ </head>
+  
+<tr>
+
+    <th scope="row">Nombre del nodo o atributo</th>
+
+    <th>Descripción</th>
+
+  </tr>
+
+ </thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);"> <!-- Verde -->
+
+  <tr>
+
+    <td>Nodo:Comprobante</td>
+
+    <td>Formato estándar del Comprobante Fiscal Digital por Internet.</td>
+    
+  </tr>
+
+ </tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);"> <!-- Rojo -->
+
+  <tr>
+
+    <td>Version</td>
+
+    <td>Debe tener el valor "3.3".
+    Este dato lo integra el sistema que  utiliza el  contribuyente  para la 
+    emisión del comprobante fiscal</td>
+
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Serie</td>
+
+    <td>Es  el  número  de  serie  que  utiliza  el  contribuyente  para  control 
+interno  de  su  información.  Este  campo  acepta  de  1  hasta  25 
+caracteres alfanuméricos.</td>
+
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Folio</td>
+
+    <td>Es  el  folio  de  control  interno  que  asigna  el  contribuyente  al 
+comprobante,  puede  conformarse  desde  1  hasta  40  caracteres 
+alfanuméricos.</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Fecha</td>
+
+    <td>Es la fecha y hora de expedición del comprobante fiscal. Se expresa 
+en la forma AAAA-MM-DDThh:mm:ss  y debe corresponder con la 
+hora local donde se expide el comprobante.
+Este dato lo integra el sistema que utiliza el contribuyente para la 
+emisión del comprobante fiscal.
+Ejemplo:
+Fecha= 2017-01-27T11:49:48</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Sello</td>
+
+    <td>Se debe registrar la clave de forma de pago con la que se liquidó el 
+comprobante simplificado de mayor monto de entre los contenidos 
+en el CFDI global, en caso de haber dos o más comprobantes con el 
+mismo  monto  pero  distintas  formas  de  pago,  el  contribuyente 
+podrá registrar a su consideración una de las  formas de pago con 
+las que se recibio el mismo.
+En este CFDI global no se pueden incluir operaciones que no hayan 
+.
+Las diferentes claves de forma de pago se encuentran incluidas en 
+el catálogo c_FormaPago</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>No Certificado</td>
+
+    <td>Es  el  número  que  identifica  al  certificado  de  sello  digital  del 
+emisor,  el cual lo incluye en el comprobante  fiscal  el sistema 
+que utiliza el contribuyente para la emisión</td>
+
+  </tr>
+
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Certificado</td>
+
+    <td>Es el contenido del certificado del sello digital del emisor  y lo 
+integra el sistema que utiliza el contribuyente para la emisión 
+del comprobante fiscal</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Condiciones De Pago</td>
+
+    <td>Este campo no debe existir</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>SubTotal</td>
+
+    <td>Es  la  suma  de  los  importes  de  los  conceptos  antes  de 
+descuentos e impuestos. No se permiten valores negativos.
+   >Este campo debe tener hasta la cantidad de  decimales 
+que soporte la moneda, ver ejemplo del campo Moneda.
+   >El  importe  registrado  en  este  campo  debe  ser  igual  al 
+redondeo  de  la  suma  de  los  importes  de  los  conceptos 
+registrados</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Descuento</td>
+
+    <td>Se puede registrar  el importe total de los descuentos aplicables 
+antes de impuestos. No se permiten valores negativos. Se debe 
+registrar cuando existan conceptos con descuento.
+  >Este campo debe tener hasta la cantidad de decimales 
+que soporte la moneda, ver ejemplo del campo Moneda.
+  >El valor registrado en este campo debe ser menor o igual 
+que el campo Subtotal.
+  >Cuando  en  el  campo  TipoDeComprobante  sea  I
+(Ingreso), y algún concepto incluya un Descuento, este 
+campo debe existir y debe ser igual al redondeo de la 
+suma  de  los  campos  Descuento  registrados  en  los 
+conceptos; en otro caso se debe omitir este campo</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Moneda</td>
+
+    <td>Se debe registrar la clave de la moneda utilizada para expresar los 
+montos, cuando se usa moneda nacional se registra "MXN"
+conforme con la especificación ISO 4217.
+Las  distintas  claves  de  moneda  se  encuentran  incluidas  en  el 
+catálogo c_Moneda.
+Ejemplo:
+Moneda= MXN</td>
+    
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Tipo Cambio</td>
+
+    <td>Se  puede  registrar  el  tipo  de  cambio  conforme  a  la  moneda 
+registrada en el comprobante.
+Este campo es requerido cuando la clave de moneda es distinta de 
+para las transacciones en que intervenga ninguna moneda). 
+Si el valor está fuera del porcentaje aplicable a la moneda, tomado 
+del  catálogo  c_Moneda,  el  emisor  debe  obtener  del  proveedor  de 
+certificación  de  CFDI   que  vaya  a  timbrar  el  CFDI,  de  manera  no 
+automática, una clave de confirmación para ratificar que el valor es 
+correcto e integrar dicha clave en el campo Confirmacion.
+El límite superior se obtiene multiplicando el valor publicado del tipo 
+de  cambio fix por la suma de uno más el porcentaje aplicable a la 
+moneda tomado del catálogo c_Moneda.
+El límite inferior se obtiene multiplicando el valor publicado del tipo 
+de cambio fix por la suma de uno menos el porcentaje aplicable a la 
+moneda  tomado  del  catálogo  c_Moneda.  Si  este  límite  fuera 
+negativo se toma cero.
+Nota impor tante:
+Esta validación estará vigente ú nicamente a par tir de que el 
+SAT  publique  en  su  Por tal  de  Inter net  los  pr ocedimientos 
+para generar la clave de confirmación y para parametr izar 
+los rangos máximos aplicables</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Total</td>
+
+    <td>Es la suma del subtotal, menos los descuentos aplicables, más 
+las  contribuciones  recibidas  (impuestos).  No  se  permiten 
+valores negativos. 
+  >Este campo debe tener hasta la cantidad de decimales 
+que soporte la moneda, ver ejemplo del campo Moneda.
+Cuando el valor equivalente en  MXN   (Peso Mexicano)  de 
+este  campo  exceda  el  límite  establecido,  debe  existir  el 
+campo Confirmacion.
+Nota impor tante:
+Esta validación estará vigente unicamente a partir de 
+que  el  SAT  publique  en  su  Por tal  de  Inter net  los 
+pr ocedimientos par a generar la clave de confirmación
+y par a parametr izar los montos máximos aplicables.
+Si  se  hacen  retenciones  no  se puede  aplicar  la  facilidad de  la 
+regla 2.7.1.24.  de la RMF vigente y debe emitirse un CFDI por 
+cada operación.</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+     <td>Tipos De Comprobante</td>
+
+    <td>Se  debe registrar la clave "I" de conformidad con el catálogo 
+c_TipoDeComprobante.</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Metodo Pago</td>
+
+    <td>Se  debe r egistrar   siempre la clave "PUE" (pago en una
+sola  exhibición),  de  confor mid ad  con  el  catálogo 
+c_MetodoPago.
+Ejemplo: 
+MetodoPago= PUE</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Lugar expedicion</td>
+
+    <td>Se debe registrar el código postal del lugar de expedición del 
+comprobante  (domicilio  de  la  matriz  o  de  la  sucursal),  debe 
+corresponder  con  una  clave  de  código  postal  incluida  en  el 
+catálogo.
+En  el  caso  de  que  se  emita  un  comprobante  fiscal  en  una 
+sucursal,  en  dicho  comprobante  se  debe  registrar  el  código 
+postal  de  ésta,  independientemente  de  que  los  sistemas  de 
+facturación  de  la  empresa  se  encuentren  en  un  domicilio 
+distinto al de la sucursal. 
+Al ingresar el Código Postal en este campo se cumple con el requisito 
+de señalar el domicilio y lugar de expedición del comprobante a que 
+se refieren las fracciones I y III del Artículo 29-A del CFF.
+Los  distintos  códigos  postales  se  encuentran  incluidos  en  el 
+catálogo c_CodigoPostal.
+Ejemplo:  
+LugarExpedicion= 01000</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Confirmacion</td>
+
+    <td>Se debe registrar la clave de confirmación única e irrepetible que 
+entrega  el  proveedor  de  certificación  de  CFDI   o  el   SAT  a  los 
+emisores  (usuarios)  para  expedir  el  comprobante  con  importes  o 
+tipo de cambio fuera del rango establecido o en ambos casos.
+Ejemplo: 
+Confirmacion= ECVH1
+Se pueden registrar valores alfanuméricos a 5 posiciones.
+Nota impor tante:
+El  uso  de  esta  clave   estar á  vigente  unicamente  a  par tir  de 
+que  el  SAT  publique  en  su  Portal  de  Inter net  los 
+pr ocedimientos par a generar la clave de confirmación   y para 
+parametr izar los montos y rangos máximos aplicables.</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Nodo:CfdiRelacionados</td>
+
+    <td>En  este  nodo  se  puede  expresar  la  información  de  los 
+comprobantes fiscales relacionados.</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Tipo Relacion</td>
+
+    <td>Se  debe  registrar  la  clave  de  la  relación  que  existe  entre  éste 
+comprobante (factura global) que se está generando y el o los CFDI 
+previos que tienen alguna relación entre si.
+La  clave  de  Tipo  de  relación  se  encuentra  incluida  en  el  catálogo 
+c_TipoRelacion publicado en el Portal del SAT.
+    >sustitución,  el
+comprobante  que se está generando  (factura global)  como 
+sustituto.
+Ejemplo:  
+TipoRelacion= 04</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Nodo:CfdiRelacionado</td>
+
+    <td>En este nodo se debe expresar la información de los comprobantes 
+fiscales relacionados.</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>UUID</td>
+
+    <td>Se  debe  registrar  el  folio  fiscal  (UUID)  de  un  comprobante  fiscal 
+relacionado con el presente comprobante.
+Ejemplo: 
+UUID=  5FB2822E-396D-4725-8521-CDC4BDD20CCF</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Nodo:Emisor</td>
+
+    <td>En este  nodo se debe expresar la información del contribuyente 
+que emite el comprobante fiscal</td> 
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>RFC</td>
+
+    <td>Se  debe  registrar  la  Clave  en  el  Registro  Federal  de 
+Contribuyentes del emisor del comprobante.
+En el caso de que el emisor sea una persona física, este campo 
+debe  contener  una  longitud  de  13  posiciones,  tratándose  de 
+personas morales debe contener una longitud de 12 posiciones.
+Ejemplo:
+En el caso de una persona física se debe registrar: 
+Rfc=CABL840215RF4
+En el caso de una persona moral se debe registrar: 
+Rfc=PAL7202161U0</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Nombre</td>
+
+    <td>Se puede registrar el nombre, denominación o razón social del 
+emisor del comprobante.
+Ejemplo:
+En el caso de una persona física se debe registrar: 
+Nombre= Mar ton Alee jandro Sanz i  Fierr or
+En el caso de una persona moral se debe registrar: 
+Nombre=La Palma  Aei0 S  A de C V  </td>
+
+</tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Regimen Fiscal</td>
+
+    <td>Se debe especificar la clave del régimen fiscal del contribuyente 
+emisor bajo el cual se está emitiendo el comprobante.
+Las claves de los diversos regímenes se encuentran incluidas en 
+el catálogo c_RegimenFiscal publicado en el Portal del SAT.
+Ejemplo:  En el caso de que el emisor sea una persona moral 
+inscrita  en  el  Régimen  General  de  Ley  de  Personas  Morales, 
+debe registrar lo siguiente:
+RegimenFiscal= 601</td>
+
+</tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Nodo:Receptor</td>
+
+    <td>En este nodo se debe expresar  la información del contribuyente 
+receptor del comprobante</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>RFC</td>
+
+    <td>se debe registrar el valor "XAXX010101000"
+Ejemplo:
+Rfc= XAXX010101000</tr>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Nombre</td>
+
+    <td>Este campo no debe existir</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Residencia Fiscal</td>
+
+    <td>Este campo no debe existir</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>NumRegIdTrib</td>
+
+    <td>Este campo no debe existir</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>UsoCFDI</td>
+
+    <td>Se debe registrar la clave "P01" (Por definir).</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>NodoConcepto</td>
+
+    <td>En este nodo se debe expresar la información detallada de cada 
+uno  de  los  comprobantes  de  operaciones  con  el  público  en 
+general.</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>ClaveProdServ</td>
+
+    <td>En este campo se debe registrar la clave "01010101" del 
+catálogo c_Clave ProdServ publicado en el Portal del SAT.
+Ejemplo: 
+ClaveProdServ= 01010101</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>No Identificacion</td>
+
+    <td>En  este  campo  se  debe  registrar  el  número  de  folio  o  de 
+operación de los comprobantes  de operación con el público en 
+general.  Puede  conformarse  desde  1  hasta  20  caracteres 
+alfanuméricos
+Ejemplo:
+NoIdentificacion= 150</td>
+
+  </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+
+    <td>Cantidad</td>
+
+    <td>Se debe registrar el valor"1"
+Ejemplo:
+Cantidad= 1</td>
+
+  </tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Clave Unidad</td>
+
+    <td>Se debe registrar la clave "ACT" del catálogo c_Claveunidad 
+publicado en el Portal del SAT.
+Ejemplo:
+ClaveUnidad= ACT</td>
+
+  </tr>
+ </table>  <!-- Aqui termina codigo de Jonathan -->
 </html>
