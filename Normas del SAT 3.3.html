@@ -19,4 +19,166 @@ otros. En esta ocasión hablaremos de las nuevas reglas de validación y los cambi
 etapa de la facturación electrónica en México.</p>
 <br/></br>
 
- </boby>
+ </boby><br/></br>
+
+<boby>  <!-- Empieza codigo de Erick (Tema1) -->
+
+ Tema 1:<br/>
+Se incorporan 46 reglas de validacion
+<br/>
+</br>
+
+La validación del CFDI ha ido cambiando desde la implementación de la factura electrónica en 2012. Sin embargo, estas nuevas reglas de validación representan el mayor cambio y el mayor intento de homologación desde el inicio de este comprobante fiscal.
+ 
+Las validaciones de los CFDI’s corresponden a tres áreas específicas:
+ 
+•	ARITMÉTICAS: Validación de números y operaciones elementales como subtotales, cálculo de impuestos y redondeos, entre otros.
+•	CONGRUENCIA: Validación de datos como RFC, régimen fiscal, total descuento vs descuento por partida, entre otros.
+•	CONDICIONALES: Cumplimiento de condiciones o requisitos como moneda, confirmación y lugar de expedición, entre otros.
+ 
+Dentro de estas categorías recaen estas nuevas 46 reglas de las cuales las más relevantes son:<br/></br>
+
+</boby><br/></br>  
+
+<table class="egt">
+    <colgroup>
+
+  <colgroup span="1" style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);"></colgroup>
+
+  <colgroup span="1" style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);"></colgroup>
+
+   <caption>Se incorporan 46 reglas de validación</caption>
+   <br>
+  
+<tr>
+
+    <th scope="row">Campo</th>
+
+    <th>CFDI versión 3.2</th>
+
+    <th>CFDI versión 3.3</th>
+
+  </tr>
+
+  <tr>
+
+    <td>Uso de CFDI</td>
+
+    <td>No existe</td>
+
+    <td>Se registran conforme al catálago de uso de CDF(lo indica el receptor)</td>
+
+  </tr>
+
+ <tr>
+
+    <td>Tipo de Relación</td>
+
+    <td>No existe</td>
+
+    <td>Se registra la clave que identifica la relación que hay entre facturas</td>
+
+  </tr>
+
+ <tr>
+
+    <td>CFDI Relacionado</td>
+
+    <td>No existe</td>
+
+    <td>Se registran los UIDD de las facturas relacionadas</td>
+
+  </tr>
+
+ <tr>
+
+    <td>Descuento</td>
+
+    <td>Existe, como dato sin identificar a qué concepto aplica</td>
+
+    <td>Se registra por concepto</td>
+
+  </tr>
+
+ <tr>
+
+    <td>Clave de producto o Servicios</td>
+
+    <td>No existe</td>
+
+    <td>Se registra conforme al catálogo de productos y servicios</td>
+
+  </tr>
+
+ <tr>
+
+    <td>Clave de unidad de medida</td>
+
+    <td>No existe</td>
+
+    <td>Se registra conforme al catálogo de unidad de medida</td>
+
+  </tr>
+
+ <tr>
+
+    <td>Lugar de expedición</td>
+
+    <td>Existe,no está estandarizado</td>
+
+    <td>Se registra el codigó postal del domicilio fiscal o sucursal conforme al catálogo de codiós postales</td>
+
+  </tr>
+
+ <tr>
+
+    <td>Régimen fiscal</td>
+
+    <td>Puede no registrarse o aplicar "N/A"</td>
+
+    <td>Se registra conforme al catálogo de régimen fiscal</td>
+
+  </tr>
+
+ <tr>
+
+    <td>Formato de pago</td>
+
+    <td>Es invertida</td>
+
+    <td>Se registra conforme al catálogo de forma de pago</td>
+
+  </tr>
+
+ <tr>
+
+    <td>Método de pago</td>
+
+    <td>Se puede registrar "N/A"</td>
+
+    <td>Se registra conforme al catálago de método de pago</td>
+
+  </tr>
+
+ <tr>
+
+    <td>Tipo de comprobante</td>
+
+    <td>Incluyen:Ingreso, Egreso, Traslado</td>
+
+    <td>Se incorporan:Nómina,pagos</td>
+
+  </tr>
+
+ <tr>
+
+    <td>RFC Receptor</td>
+
+    <td>Existe, se valida únicamente la estructura</td>
+
+    <td>Se registra una vez comprobado en el validador de RFC del SAT</td>
+
+  </tr>
+</table><br/></br> <!-- Termina codigo de Erick -->
+
+</html>
