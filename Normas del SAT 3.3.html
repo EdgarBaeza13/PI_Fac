@@ -1438,6 +1438,182 @@ publicado en el Portal del SAT.
 Ejemplo:
 ClaveUnidad= ACT</td>
 
-  </tr>
- </table>  <!-- Aqui termina codigo de Jonathan -->
+  </tr><!-- Aqui termina codigo de Jonathan -->
+ </tr>  <!-- Aqui empieza el codigo de Nicolas Salvador -->
+</tbody> 
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+    <td>Unidad</td>
+<td> Este campo no debe existir. 
+</tr> 
+
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td>Descripcion</td>
+
+    <td> Se debe registrar el valor  
+ 
+Ejemplo: Descripcion=Venta  
+ 
+</tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+    <td>ValorUnitario</td>
+<td> En este campo se debe registrar el subtotal del comprobante de operaciones con el público en general, el cual puede contener de cero hasta seis decimales. Si el tipo de comprobante es de ngreso), este valor debe ser mayor a cero.  
+ 
+Ejemplo: ValorUnitario= 1230.00 
+</tr> 
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td> Importe </td>
+
+    <td> Debe ser equivalente al resultado de multiplicar la Cantidad por el ValorUnitario expresado en el concepto, el cual será calculado por el sistema que genera el comprobante y considerará los redondeos  que tenga registrado este campo. No se permiten valores negativos. 
+ 
+Ejemplo:  Importe= 1230.00 
+Cantidad Valor unitario Importe 
+1 1230.00  1230.00 
+ 
+ 
+</tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+    <td>Descuento</td>
+<td> Se debe registrar el importe de los descuentos aplicables a cada comprobante de operaciones con el público en general, debe tener hasta la cantidad de decimales que  tenga registrado en el atributo importe del concepto y debe ser menor o igual al campo Importe. No se permiten valores negativos. 
+ 
+Ejemplo:  Descuento= 864.10 
+Cantidad Valor unitario Importe Descuento 
+3.141649 1230.00  3864.24 864.10 
+</tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td> Nodo: Impuestos </td>
+
+    <td> En este nodo se pueden expresar los impuestos aplicables a cada comprobante de operaciones con el público en general. 
+ 
+Cuando un concepto no registra la información de algún impuesto, implica que no es objeto del mismo. 
+ 
+Si se registra información en este nodo, debe existir la sección: traslados. 
+</tr>
+
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+    <td>Nodo:Traslado s</td>
+<td> En este nodo se pueden expresarar los impuestos trasladados aplicables a cada  comprobante de operaciones con el público en general. 
+</tr>
+
+
+
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td> Nodo:Traslado  </td>
+
+    <td> En este nodo se debe expresar la información detallada de un traslado de impuestos correspondiente a cada comprobante  de operaciones con el público en general. 
+ 
+En el caso de que un concepto contenga impuesto trasladado por Tasa o Cuota, se debe expresar en diferentes apartados. 
+ 
+Nota: Debe considerarse que estos comprobantes no tienen un receptor en realidad que puediera usarlos para acreditamiento, por lo que los desgloses de impuestos trasladados tienen el fin de dar control y fácil identificación de estos datos a su emisor.
+
+</tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+    <td>Nodo:Base</td>
+<td> Se debe registrar el valor para el cálculo del impuesto que se traslada, puede contener de cero hasta seis decimales. 
+ 
+? El valor de este campo debe ser mayor que cero. 
+</tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td> Impuesto </td>
+
+    <td> Se debe registrar la clave del tipo de impuesto trasladado aplicable a cada comprobante de operaciones con el público en general, las cuales se encuentran incluidas en el catálogo c_Impuesto publicado en el Portal del SAT. 
+ 
+Ejemplo: Impuesto= 002 
+c_Impuesto Descripción 
+002 IVA 
+003 IEPS 
+ </tr>
+
+</tbody>
+
+  <tbody style="background: rgba(255, 128, 0, 0.3); border: 1px solid rgba(200, 100, 0, 0.3);">
+
+  <tr>
+    <td> Tipo Factor</td>
+<td>  Se debe registrar el tipo de factor que se aplica a la base del impuesto, el cual se encuentra incluido en el catálogo c_TipoFactor publicado en el Portal del SAT. 
+ 
+Ejemplo: TipoFactor= Tasa 
+ 
+c_TipoFactor Tasa Cuota Exento 
+
+</tr>
+
+</thead>
+
+  <tbody style="background: rgba(128, 255, 0, 0.3); border: 1px solid rgba(100, 200, 0, 0.3);">
+
+  <tr>
+
+    <td> Tasa O Cuota </td>
+
+    <td> Se puede registrar el valor de la tasa o cuota del impuesto que se traslada para cada comprobante de operaciones con el público en general. Es requerido cuando el campo TipoFactor corresponda a Tasa o Cuota. 
+ 
+Los distintos valores para las tasas o cuotas se encuentran incluidos en el catálogo c_TasaOCuota publicado en el Portal del SAT. 
+ 
+? Si el valor registrado es fijo debe corresponder al tipo de impuesto y al tipo de factor conforme al catálogo c_TasaOCuota. ? Si el valor registrado es variable, debe corresponder al rango entre el valor mínimo y el valor máximo señalado en el catálogo. 
+ 
+Ejemplo: TasaOCuota= 0.160000 
+Rango o Fijo 
+c_TasaOCuota 
+Impuest o 
+Factor 
+Valor mínimo Valor máximo 
+Fijo No 0.000000 IVA Tasa 
+Fijo No 0.160000 IVA Tasa 
+</tr>
+
+</tr>  <!-- Aqui termina el codigo de Nicolas Salvador -->
+</table>
 </html>
